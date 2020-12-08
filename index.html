@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Задание 1
+        "use strict";
+        let tc = +prompt("Введите температуру в Цельсиях: "); //tc - цельсия
+        let tf = (9 / 5) * tc + 32; //tf - фаренгейт
+        alert("Температура в Фаренгейтах: " + tf);
+
+        //Задание 2
+        let name = prompt("Введите имя: ");
+        let admin = name;
+        alert(admin);
+
+        //Задание 3
+
+        /* result1
+        1. 10 + 10 = 20
+        2. 20 + "10" = "2010"
+        3. "2010" присваиваем в переменную result1
+        4. с помощью console.log выводим result1 в консоль
+        Т.к. переменные разного типа, поэтому они склеиваются и получается строка "2010" 
+        */
+        let result1 = 10 + 10 + "10";
+        console.log(result1);
+
+        /* result2
+        1. 10 + "10" = "1010"
+        2. "1010" + 10 = "101010"
+        3. "101010" присваиваем в переменную result2
+        4. с помощью console.log выводим result2 в консоль
+        Такой же случай, как и в result1 
+        */
+        let result2 = 10 + "10" + 10;
+        console.log(result2);
+
+        /* result3
+        1. 10 + 10 = 20
+        2. 10 + +"10" = 30
+        3. 30 присваиваем в переменную result3
+        4. с помощью console.log выводим result3 в консоль
+        Получается 30, так как "+" перед "10", он унарный, поэтому приводит элемент к числу
+        */
+        let result3 = 10 + 10 + + "10";
+        console.log(result3);
+
+        /* result4
+        1. 10 / -"" = -Infinity
+        2. -Infinity присваиваем в переменную result4
+        3. с помощью console.log выводим result4 в консоль
+        Получаем -бесконечность , т.к. "-" унарный.
+        */
+        let result4 = 10 / -"";
+        console.log(result4);
+
+        /* result5
+        1. 10 / +"2,5" = NaN
+        2. NaN присваиваем в переменную result5
+        с помощью console.log выводим result5 в консоль
+        Получаем NaN, т.к. "2,5" не будет являться числом, при использование унарного "+", чтобы работало нужно заменить "2,5" на "2.5"
+        */
+        let result5 = 10 / +"2,5";
+        console.log(result5);
+    </script>
+</body>
+
+</html>
